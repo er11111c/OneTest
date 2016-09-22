@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>福州大学-大学生创业服务网</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+	<div class="login-wrapper">
+		<div class="login-box">
+			<span class="close"></span>
+			<div class="login-top">
+				<img src="images/logo.jpg" alt="">
+				<span>欢迎登录</span>
+			</div>
+			<div class="login-line1 login-line">
+				<img src="images/icon-users.png" alt="">
+				<input type="text" name="username" id="username" placeholder="请输入用户名" required>
+			</div>
+			<div class="login-line2 login-line">
+				<img src="images/icon-password.png" alt="">
+				<input type="password" name="password" id="password" placeholder="请输入密码" required>
+			</div>
+			<div class="login-line3">
+				<a class="pull-right" href="#"><span class="forgot">忘记密码</span></a>
+			</div>
+				<button id='login-btn'>登录</button>
+		</div>
+		<div class="modify-password-box modify-box">
+			<span class="close"></span>
+			<form id="forgot-password" class="modify-form">
+				<p class="tel-line">
+					<input type="text" class="tel" name="tel" placeholder="手机号" required>
+					</p>
+				<p class="code-line">	
+					<input type="text" class="code" name="v_code" placeholder="短信验证码">
+					<input class="send-btn send-password-btn" type="button"  value="发送验证码" required>
+				</p>
+				<p class="password-line">
+					<input type="text" class="psw" name="new_password" placeholder="设置新密码" required>
+				</p>
+				<p class="submit-line">
+					<input class="submit" type="submit" value="确认修改">
+				</p>
+			</form>
+		</div>
+	</div>
+
+	<!-- Header Start -->
+	<header>
+		<a href="index.html" id="logo">
+			<!-- <img src="images/logo.jpg" alt=""> -->
+		</a>
+		<div class="main-nav">
+			<ul class='clearfix'>
+				<li class='pull-left on'><a href="index.html">首页</a></li>
+				<li class='pull-left'><a href="information.html">新闻资讯</a></li>
+				<li class='pull-left'><a href="base.html">孵化基地</a></li>
+				<li class='pull-left'><a href="projects.html">创业项目</a></li>
+				<li class='pull-left'><a href="game.html">相关比赛</a></li>
+				<li class='pull-left'><a href="classroom.html">培训课堂</a></li>
+			</ul>
+		</div>
+		<span class="mobile-menu"></span>
+			<div class="usr-wrapper login-signup">
+				<span class="login"><a>登录</a></span>
+				<span class="separator"></span>
+				<span class="signup"><a href="signup.html">注册</a></span>
+			</div>
+			<div class="usr-wrapper center-cancel">
+				<span class="user-center"><a href="user_student.html">个人中心</a></span>
+				<span class="separator"></span>
+				<span class="user-cancel"><a>注销</a></span>
+			</div>
+	</header>
+	<div class="mobile-bar">
+		<ul>			
+			<li><a href="index.html">首页</a></li>
+			<li><a href="information.html">新闻资讯</a></li>
+			<li><a href="base.html">孵化基地</a></li>
+			<li><a href="projects.html">创业项目</a></li>
+			<li><a href="game.html">相关比赛</a></li>
+			<li><a href="classroom.html">培训课堂</a></li>
+		</ul>
+	</div>
+	<!-- Header End -->
+
+	<!-- Banner Start -->
+	<div class="banner-wrapper"></div>
+	<!-- Banner End -->
+
+	<!-- Content Start -->
+	<div class="container-wrapper">
+		<div class="part1">
+			<div class="container clearfix">
+				<div class="track-wrapper">
+					<a class="track" href="base.html">
+						<span class="track-icon"><img src="images/icon-apply.png" alt=""></span>
+						<span class="track-name">申请入驻</span>
+					</a>
+					<a class="track" href="javascript:void(0)" onclick="judgeStatus()">
+						<span class="track-icon"><img src="images/icon-create.png" alt=""></span>
+						<span id="project-track" class="track-name">创建项目</span>
+					</a>
+					<a class="track" href="find_partner.html">
+						<span class="track-icon"><img src="images/icon-talent.png" alt=""></span>
+						<span class="track-name">发现人才</span>
+					</a>						
+				</div>
+				<div class="row">
+					<div class="news-wrapper pull-left col-md-8 col-sm-8">
+						<div class="news-content">
+							<div class="news-top">
+								<a href='information.html'><img src="images/news.png" alt=""><h1>热门资讯</h1></a>
+							</div>
+							<div id="hot-news">
+								
+							</div>
+								
+							<div class="info-detail-wrapper claerfix">
+								<div class="info-detail-top">
+									<ul class="info-nav clearfix">
+										<li class="pull-left hover">新闻热点</li>
+										<li class="pull-left">最新政策</li>
+									</ul>
+								</div>
+								<div id="news-box" class="info-detail-box info-detail-news clearfix">
+									<div class="info-left pull-left">
+										<ul>
+										</ul>
+									</div>
+									<div class="info-right pull-left">
+										<ul>
+										</ul>
+									</div>
+								</div>
+								<div id="policy-box" class="info-detail-box info-detail-policy">
+									<div class="info-left pull-left">
+										<ul>
+											
+										</ul>
+									</div>
+									<div class="info-right pull-left">
+										<ul>
+											
+										</ul>
+									</div>
+								</div>
+															
+							</div>	
+						</div>
+					</div>	
+					<div class="notice-wrapper pull-left col-md-4  col-sm-4">
+						<div id="notice-box" class="notice-content">
+							<div class="notice-top">
+								<img src="images/notice.png" alt=""><h2><a href="information.html#type2">通知公告</a></h2>
+							</div>
+							<ul class="notice">
+							
+								<li>
+								</li>
+								
+							</ul>
+						</div>
+					</div>	
+				</div>											
+			</div>		
+		</div>
+		<div class="teacher-wrapper">
+			<div class="teacher-content container">
+				<div class="teacher-top">
+					<h1>导师团队</h1>
+					<div class="teacher-box col-md-4">
+						<div class="teacher-img">
+							<img src="images/p1.png" alt="">
+						</div>
+						<div class="teacher-detail">
+							<div class="teacher-detail-title">专家团队亲面指导</div>
+							<p class="teacher-detail-p">
+								优秀入营项目可配备专属创业导师，<br>
+								全程辅导、极速孵化，创业路上伴你同行。
+							</p>
+						</div>
+					</div>
+					<div class="teacher-box col-md-4">
+						<div class="teacher-img">
+							<img src="images/p2.png" alt="">
+						</div>
+						<div class="teacher-detail">
+							<div class="teacher-detail-title">行业前辈经验切磋</div>
+							<p class="teacher-detail-p">
+								优秀入营项目可配备专属创业导师，<br>
+								全程辅导、极速孵化，创业路上伴你同行。
+							</p>
+						</div>
+					</div>
+					<div class="teacher-box col-md-4">
+						<div class="teacher-img">
+							<img src="images/p3.png" alt="">
+						</div>
+						<div class="teacher-detail">
+							<div class="teacher-detail-title">专属导师全程指引</div>
+							<p class="teacher-detail-p">
+								优秀入营项目可配备专属创业导师，<br>
+								全程辅导、极速孵化，创业路上伴你同行。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="base-wrapper">
+			<div class="base-content container">
+				<div class="base">
+					<div class="base-top">
+						<h1><a href="base.html">创业孵化基地</a></h1>
+						<p>为创业者搭建的制度性、智能化的服务平台，为新创办的小企业提供有利于存活、发展的服务环境和空间环境的公益性服务</p>
+					</div>
+					<div id="base-box">
+					
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="projects-wrapper">
+			<div class="projects-content container clearfix">
+				<div class="projects-top">
+					<a href="projects.html"><h1>项目展示</h1></a>
+				</div>
+				<div id="project-box" class="projects-wrap">
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- Content End -->
+
+	<!-- Footer Start -->
+	<footer>
+		<div class="footer-wrapper">
+			<div class="footer-box contact">
+				<h4>联系方式</h4>
+				<p>
+					就业管理（素拓202）：0591-22866661<br>
+					
+				</p>
+			</div>
+			<div class="footer-box procedure">
+				<h4>手续办理</h4>
+				<p>
+					上午：8:30-12:00 <br>
+					下午：14:00-17:00 <br>
+				</p>
+			</div>
+			<div class="footer-box consult">
+				<h4>指导咨询</h4>
+				<p>
+					上午：8:30-12:00 <br>
+					下午：14:00-17:00 <br>
+					指导咨询室：素拓204 <br>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer End -->
+	<script src='js/jquery-3.1.0.js'></script>
+	<script src='js/script.js'></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src='js/main.js'></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
+	<script id="hotnews-template" type="text/x-handlebars-template">
+		{{#each this}}
+			<div class="news-box clearfix">
+				<div class="news-img pull-left">
+					<img src="{{pic}}" alt="">
+				</div>
+				<div class="news-detail pull-left">
+					<h3><a href='article.html?id={{nid}}'>{{theme}}</a></h3>
+					<div class="hot-news-content">{{{content}}}</div>
+				</div>
+			</div>
+		{{/each}}
+	</script>
+	<script id="news-template" type="text/x-handlebars-template">
+		<div class="info-left pull-left">
+			<ul>
+				{{#each this}}
+					{{#compare1 @index}}
+						<li><span class="info-time">{{date}}</span><a href="article.html?id={{nid}}">{{theme}}</a></li>
+					{{/compare1}}
+				{{/each}}
+			</ul>
+		</div>
+		<div class="info-right pull-left">
+			<ul>
+				{{#each this}}
+					{{#if theme}}
+						{{#compare2 @index}}
+							<li><span class="info-time">{{date}}</span><a href="article.html?id={{nid}}">{{theme}}</a></li>
+						{{/compare2}}
+					{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	</script>
+	<script id="policy-template" type="text/x-handlebars-template">
+		<div class="info-left pull-left">
+			<ul>
+				{{#each this}}
+					{{#if theme}}
+						{{#compare1 @index}}
+							<li><span class="info-time">{{date}}</span><a href="article.html?id={{nid}}">{{theme}}</a></li>
+						{{/compare1}}
+					{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+		<div class="info-right pull-left">
+			<ul>
+				{{#each this}}
+					{{#if theme}}
+						{{#compare2 @index}}
+							<li><span class="info-time">{{date}}</span><a href="article.html?id={{nid}}">{{theme}}</a></li>
+						{{/compare2}}
+					{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	</script>
+	<script  id="notice-template" type="text/x-handlebars-template">
+		<div class="notice-top">
+			<img src="images/notice.png" alt=""><h2><a href="information.html">通知公告</a></h2>
+		</div>
+		<ul class="notice">
+			{{#each this}}
+				{{#if theme}}
+					<li>
+						<div class='notice-title'><a href="article.html?id={{nid}}">{{theme}}</a></div>
+						<span class="notice-time">{{date}}</span>
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</script>
+	<script id="base-template" type="text/x-handlebars-template">
+			{{#each this}}
+				{{#compare @index}}
+					{{#if is_show}}
+						<div class="base-box col-md-4">
+							<div class="base-img">
+								<a href="base.html?fid={{fid}}" style="background:url('{{pic}}') no-repeat center; background-size: cover">
+									<!-- <img src="{{pic}}" alt=""> -->
+								</a>
+							</div>
+							<div class="base-detail">{{name}}</div>
+						</div>
+					{{/if}}
+				{{/compare}}
+			{{/each}}
+		</script>
+	<script id="project-template" type="text/x-handlebars-template">
+		{{#each this}}
+			{{#compare @index}}
+				{{#if is_show}}
+					<div class="projects col-md-3 col-sm-6 pull-left">
+						<div class="projects-box">
+							<div class="projects-img">
+								<a href="projects_info.html?pid={{pid}}"><img src="{{pic}}" alt=""></a>
+							</div>
+							<div class="projects-info">
+								<a href="projects_info.html?pid={{pid}}"><h4 class="projects-name">{{name}}</h4></a>
+								<p class="projects-detail"> {{synopsis}}</p>
+							</div>
+						</div>
+					</div>
+				{{/if}}
+			{{/compare}}
+		{{/each}}
+	</script>
+</body>
+</html>

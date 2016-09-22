@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>创业教育成为学生发展助推器</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<div class="login-wrapper">
+		<div class="login-box">
+			<span class="close"></span>
+			<div class="login-top">
+				<img src="images/logo.jpg" alt="">
+				<span>欢迎登录</span>
+			</div>
+			<div class="login-line1 login-line">
+				<img src="images/icon-users.png" alt="">
+				<input type="text" name="username" id="username" placeholder="请输入用户名">
+			</div>
+			<div class="login-line2 login-line">
+				<img src="images/icon-password.png" alt="">
+				<input type="password" name="password" id="password" placeholder="请输入密码">
+			</div>
+			<div class="login-line3">
+				<a class="pull-right" href="#"><span class="forgot">忘记密码</span></a>
+			</div>
+				<button id='login-btn'>登录</button>
+		</div>
+		<div class="modify-password-box modify-box">
+			<span class="close"></span>
+			<form action="" id="modify-password" class="modify-form">
+				<p class="tel-line">
+					<input type="text" name="tel" placeholder="手机号">
+					</p>
+				<p class="code-line">	
+					<input type="text" name="v_code" placeholder="短信验证码">
+					<input class="send-btn" type="button"  value="发送验证码">
+				</p>
+				<p class="password-line">
+					<input type="text" name="new_password" placeholder="设置新密码">
+				</p>
+				<p class="submit-line">
+					<input class="submit" type="submit" value="确认修改">
+				</p>
+			</form>
+		</div>
+	</div>
+	<!-- Header Start -->
+	<header>
+		<a href="index.html" id="logo">
+			<!-- <img src="images/logo.jpg" alt=""> -->
+		</a>
+		<div class="main-nav">
+			<ul class='clearfix'>
+				<li class='pull-left'><a href="index.html">首页</a></li>
+				<li class='pull-left on'><a href="information.html">新闻资讯</a></li>
+				<li class='pull-left'><a href="base.html">孵化基地</a></li>
+				<li class='pull-left'><a href="projects.html">创业项目</a></li>
+				<li class='pull-left'><a href="game.html">相关比赛</a></li>
+				<li class='pull-left'><a href="#">培训课堂</a></li>
+			</ul>
+		</div>
+		<span class="mobile-menu"></span>
+			<div class="usr-wrapper login-signup">
+				<span class="login"><a>登录</a></span>
+				<span class="separator"></span>
+				<span class="signup"><a href="signup.html">注册</a></span>
+			</div>
+			<div class="usr-wrapper center-cancel">
+				<span class="user-center"><a href="user_student.html">个人中心</a></span>
+				<span class="separator"></span>
+				<span class="user-cancel"><a>注销</a></span>
+			</div>
+	</header>
+	<div class="mobile-bar">
+		<ul>			
+			<li><a href="index.html">首页</a></li>
+			<li><a href="information.html">新闻资讯</a></li>
+			<li><a href="base.html">孵化基地</a></li>
+			<li><a href="projects.html">创业项目</a></li>
+			<li><a href="game.html">相关比赛</a></li>
+			<li><a href="classroom.html">培训课堂</a></li>
+		</ul>
+	</div>
+	<!-- Header End -->
+	<div class="top-background">
+	</div>
+	<div class="container">
+		<div class="article-wrapper" id="article-wrapper">
+			<div class="article">
+				<div id='article-top'>
+					<div><h1 id="article-title"></h1></div>
+					<div class="article-info" id="article-info">
+						<div class="col-md-4">发布时间: <span id="article-publish-time"></span></div>
+						<div class="col-md-4">发布者：<span id="article-publisher"></span></div>
+						<div class="col-md-4">浏览量：<span id="article-pageview"></span></div>
+					</div>
+				</div>
+				
+				<div class="article-detail" id="article-content">
+				</div>
+			</div>
+		
+		
+		</div>
+		<a class="return" onClick="javascript:history.back(-1);" >返回上一级</a>
+	</div>
+	<footer>
+		<div class="footer-wrapper">
+			<div class="footer-box contact">
+				<h4>联系方式</h4>
+				<p>
+					就业管理（素拓202）：0591-22866661<br>
+					
+				</p>
+
+			</div>
+			<div class="footer-box procedure">
+				<h4>手续办理</h4>
+				<p>
+					上午：8:30-12:00 <br>
+					下午：14:00-17:00 <br>
+				</p>
+			</div>
+			<div class="footer-box consult">
+				<h4>指导咨询</h4>
+				<p>
+					上午：8:30-12:00 <br>
+					下午：14:00-17:00 <br>
+					指导咨询室：素拓204 <br>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<script src='js/jquery-3.1.0.js'></script>
+	<script src='js/main.js'></script>
+	<script src='js/handlebars-v4.0.5.js'></script>
+	<script id="top-template" type="text/x-handlebars-template">
+		<div><h1 id="article-title">{{theme}}</h1></div>
+		<div class="article-info">
+			<div class="col-md-4">发布时间: <span>{{date}}</span></div>
+			<div class="col-md-4">发布者：<span>{{name.name}}</span></div>
+			<div class="col-md-4">浏览量：<span>{{hits}}</span></div>
+		</div>
+	</script>
+	<script src='js/information_detail.js'></script>
+</body>
+</html>

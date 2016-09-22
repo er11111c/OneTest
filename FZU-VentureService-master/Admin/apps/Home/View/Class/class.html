@@ -1,0 +1,50 @@
+<include file="Public:header"/>
+<include file="class_header"/>
+
+			
+	<div class="admin-classes-table admin-table block">
+		<table>
+			<tr>
+				<th class="admin-th-select">
+					<input class="admin-students-select-btn" type="checkbox"> 全选
+				</th>
+				<th class="admin-th-student-id admin-th-id"><span>ID</span></th>
+				<th class="admin-th-student-username admin-th-username"><span>用户名</span></th>
+				<th class="admin-th-student-name admin-th-name"><span>姓名</span></th>
+				<th class="admin-th-student-phone admin-th-phone"><span>手机号</span></th>
+				<th class="admin-th-student-email admin-th-email"><span>邮箱</span></th>
+				<th class="admin-th-student-management admin-th-management"><span>管理操作</span></th>
+			</tr>
+			<empty name="enlist">
+				<tr align="center">
+					<td colspan="6">
+						暂无待审核的报名信息
+					</td>
+				</tr>
+			<else />
+				<volist name="enlist" id="vo">
+					<tr>
+						<td class="admin-student-select">
+							<input class="admin-students-select-btn" type="checkbox">
+						</td>
+						<td class="admin-student-id">{$vo.cid}</td>
+						<td class="admin-student-username">
+							<a href="">{$vo.stu.username}</a>
+						</td>
+						<td class="admin-student-name"><a href="">{$vo.stu.name}</a></td>
+						<td class="admin-student-phone"><span>{$vo.stu.tel}</span></td>
+						<td class="admin-student-email"><span>{$vo.stu.email}</span></td>
+						<td class="admin-student-operation admin-operation">
+							<span class="admin-project-pass admin-pass"><a href="__ROOT__/index.php/home/class/pass?id={$vo.id}">通过</a></span>
+							<span class="admin-project-refuse admin-refuse">拒绝</span>
+						</td>
+					</tr>
+				</volist>
+			</empty>
+		</table>
+
+	</div>
+
+
+<include file="class_footer"/>
+<include file="Public:footer"/>

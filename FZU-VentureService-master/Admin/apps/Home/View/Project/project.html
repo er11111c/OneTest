@@ -1,0 +1,79 @@
+<include file="Public:header"/>
+<!-- 项目管理 -->
+<div class="user-box admin-projects-management sub-management pull-right">
+	<div class="admin-top admin-projects-management">
+		<ul class="admin-management-ul clearfix" id="admin-projects">
+			<li class="pull-left now-li">项目审核</li>
+			<li class="pull-left">项目信息</li>
+		</ul>
+	</div>
+	<!-- 项目审核 -->
+	<div class="admin-projects-table admin-check-projects-table admin-table block" id="projects-check-table">
+		<table>
+			<tr>
+				<th class="admin-th-select">
+					<input class="admin-project-select-btn" type="checkbox"> 全选
+				</th>
+				<th class="admin-th-project-id admin-th-id"><span>ID</span></th>
+				<th class="admin-th-project-name admin-th-name"><span>项目名</span></th>
+				<th class="admin-th-project-username admin-th-username"><span>负责人</span></th>
+				<th class="admin-th-project-time admin-th-time"><span>申请时间</span></th>
+				<th class="admin-th-project-management admin-th-management"><span>管理操作</span></th>
+			</tr>
+			<volist name="projects" id="v" empty="暂无待审核的项目信息">
+				<if condition="$v.status eq 0">
+					<tr>
+						<td class="admin-project-select">
+							<input class="admin-project-select-btn" type="checkbox">
+						</td>
+						<td class="admin-project-id">{$v.pid}</td>
+						<td class="admin-project-name">
+							<a href="">{$v.name}</a>
+						</td>
+						<td class="admin-project-username"><span>{$v.charge.name}</span></td>
+						<td class="admin-project-time"><span>{$v.issue_time}</span></td>
+						<td class="admin-project-operation admin-operation">
+							<span class="admin-project-pass admin-pass"><a href="__ROOT__/index.php/home/project/pass?pid={$v.pid}">通过</a></span>
+							<span class="admin-project-refuse admin-refuse" id="{$v.charge.tel}" onclick="refuse(this)">拒绝</span>
+						</td>
+					</tr>
+				</if>
+			</volist>
+			
+		</table>
+	</div>
+	<!-- 项目信息 -->
+	<div class="admin-projects-table admin-check-projects-table admin-table" id="projects-check-table">
+		<table>
+			<tr>
+				<th class="admin-th-select">
+					<input class="admin-project-select-btn" type="checkbox"> 全选
+				</th>
+				<th class="admin-th-project-id admin-th-id"><span>ID</span></th>
+				<th class="admin-th-project-name admin-th-name"><span>项目名</span></th>
+				<th class="admin-th-project-username admin-th-username"><span>负责人</span></th>
+				<th class="admin-th-project-time admin-th-time"><span>申请时间</span></th>
+				<th class="admin-th-project-management admin-th-management"><span>管理操作</span></th>
+			</tr>
+			<volist name="projects" id="v" empty="暂无项目信息">
+				<if condition="$v.status eq 1">
+					<tr>
+						<td class="admin-project-select">
+							<input class="admin-project-select-btn" type="checkbox">
+						</td>
+						<td class="admin-project-id">{$v.pid}</td>
+						<td class="admin-project-name">
+							<a href="">{$v.name}</a>
+						</td>
+						<td class="admin-project-username"><span>{$v.charge.name}</span></td>
+						<td class="admin-project-time"><span>{$v.issue_time}</span></td>
+						<td class="admin-project-operation admin-operation">
+							<a href="__ROOT__/index.php/home/project/detail?pid={$v.pid}"><span class="admin-view-info">查看信息</span></a>	
+						</td>
+					</tr>
+				</if>
+			</volist>
+		</table>
+	</div>
+</div>
+<include file="Public:footer"/>

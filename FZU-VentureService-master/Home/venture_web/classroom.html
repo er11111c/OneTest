@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>项目展示-福州大学创业服务网</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="login-wrapper">
+		<div class="login-box">
+			<span class="close"></span>
+			<div class="login-top">
+				<img src="images/logo.jpg" alt="">
+				<span>欢迎登录</span>
+			</div>
+			<div class="login-line1 login-line">
+				<img src="images/icon-users.png" alt="">
+				<input type="text" name="username" id="username" placeholder="请输入用户名">
+			</div>
+			<div class="login-line2 login-line">
+				<img src="images/icon-password.png" alt="">
+				<input type="password" name="password" id="password" placeholder="请输入密码">
+			</div>
+			<div class="login-line3">
+				<a class="pull-right" href="#"><span class="forgot">忘记密码</span></a>
+			</div>
+				<button id='login-btn'>登录</button>
+		</div>
+		<div class="modify-password-box modify-box">
+			<span class="close"></span>
+			<form action="" id="modify-password" class="modify-form">
+				<p class="tel-line">
+					<input type="text" name="tel" placeholder="手机号">
+					</p>
+				<p class="code-line">	
+					<input type="text" name="v_code" placeholder="短信验证码">
+					<input class="send-btn" type="button"  value="发送验证码">
+				</p>
+				<p class="password-line">
+					<input type="text" name="new_password" placeholder="设置新密码">
+				</p>
+				<p class="submit-line">
+					<input class="submit" type="submit" value="确认修改">
+				</p>
+			</form>
+		</div>
+	</div>
+	<div class="mask">
+		<div class="apply-box">
+			<span class="close"></span>
+			<input id="snum" class="snum text-center" type="text" placeholder="请输入学号">
+			<button id="training-apply" class="training-apply-btn">立即报名</button>
+		</div>
+	</div>
+	<!-- Header Start -->
+	<header>
+		<a href="index.html" id="logo">
+			<!-- <img src="images/logo.jpg" alt=""> -->
+		</a>
+		<div class="main-nav">
+			<ul class='clearfix'>
+				<li class='pull-left'><a href="index.html">首页</a></li>
+				<li class='pull-left'><a href="information.html">新闻资讯</a></li>
+				<li class='pull-left'><a href="base.html">孵化基地</a></li>
+				<li class='pull-left'><a href="projects.html">创业项目</a></li>
+				<li class='pull-left'><a href="game.html">相关比赛</a></li>
+				<li class='pull-left on'><a href="#">培训课堂</a></li>
+			</ul>
+		</div>
+		<span class="mobile-menu"></span>
+		<div class="usr-wrapper login-signup">
+				<span class="login"><a>登录</a></span>
+				<span class="separator"></span>
+				<span class="signup"><a href="signup.html">注册</a></span>
+			</div>
+			<div class="usr-wrapper center-cancel">
+				<span class="user-center"><a href="user_student.html">个人中心</a></span>
+				<span class="separator"></span>
+				<span class="user-cancel"><a>注销</a></span>
+			</div>
+	</header>
+	<div class="mobile-bar">
+		<ul>			
+			<li><a href="index.html">首页</a></li>
+			<li><a href="information.html">新闻资讯</a></li>
+			<li><a href="base.html">孵化基地</a></li>
+			<li><a href="projects.html">创业项目</a></li>
+			<li><a href="game.html">相关比赛</a></li>
+			<li><a href="classroom.html">培训课堂</a></li>
+		</ul>
+	</div>
+	<!-- Header End -->
+
+	<div class="top-background">
+	</div>
+	
+	<div id="popup" class="detail-popup" style="display:none"></div>
+	<!-- Classroom Start -->
+	<div class="classroom-wrapper">
+		<div class="container">
+			<div class="classroom-training clearfix">
+					<div class="classroom-title">
+						<img src="images/课堂培训.png" alt="">
+						<h2>创业培训</h2>
+					</div>
+					<div id="traning-box" class="clearfix">
+						<div class="col-md-3 col-sm-4">
+							
+						</div>
+					</div>
+					
+			</div>
+			<div class="classroom-lessons clearfix">
+					<div class="classroom-title">
+					<img src="images/课堂要点.png" alt="">
+						<h2>培训教材</h2>
+					</div>
+					<div id="lessons-box">
+						<!-- <div class="col-md-3 col-sm-4">
+							<div class="classroom-box">
+								<a class="classroom-img" href="http://ow365.cn/?i=10263&furl=http://123.207.58.12/FZU-VentureService/Upload/Courses/Word/test.docx" target="_blank"><img src="images/classrom2.jpg" alt=""></a>
+								<div class="classroom-info">
+									<h2><a href="http://ow365.cn/?i=10263&furl=http://123.207.58.12/FZU-VentureService/Upload/Courses/Word/test.docx" target="_blank">test</a></h2>
+									<a class="download-btn" href="http://123.207.58.12/FZU-VentureService/Upload/Courses/Word/test.docx">下载</a>
+								</div>
+							</div>
+						</div> -->
+						
+					</div>
+			</div>
+		</div>
+	</div>
+	<!-- Classroom End -->
+
+	<!-- Footer Start -->
+	<footer>
+		<div class="footer-wrapper">
+			<div class="footer-box contact">
+				<h4>联系方式</h4>
+				<p>
+					就业管理（素拓202）：0591-22866661<br>
+					
+				</p>
+
+			</div>
+			<div class="footer-box procedure">
+				<h4>手续办理</h4>
+				<p>
+					上午：8:30-12:00 <br>
+					下午：14:00-17:00 <br>
+				</p>
+			</div>
+			<div class="footer-box consult">
+				<h4>指导咨询</h4>
+				<p>
+					上午：8:30-12:00 <br>
+					下午：14:00-17:00 <br>
+					指导咨询室：素拓204 <br>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer End -->
+	
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
+	<script id="traning-template" type="text/x-handlebars-template">
+		{{#each this}}
+			{{#if status}}
+				<div class="col-md-3 col-sm-4">
+					<div class="classroom-box">
+						<div class="classroom-box-mask" id="{{cid}}">
+						<p class="traning-content">{{content}}</p>
+						</div>
+						<a class="classroom-img" href=""><img src="images/classrom1.jpg" alt=""></a>
+						<div class="classroom-info">
+							<h2>SYB培训模式</h2>
+							<a class="clasroom-training-detail clearfix">
+								<span class="pull-left">主讲人：{{teacher}}</span>
+								<span class="pull-right">人数：{{students}}/{{limit}}</span>
+								<span class="pull-left">培训时间：<br>{{start_time}}至{{deadline}}</span>
+							</a>
+						</div>
+						<a class="training-apply-btn apply" href="javascript:void(0)" rel={{cid}}>我要报名</a>
+					</div>
+				</div>
+			{{/if}}
+		{{/each}}
+	</script>
+	<script id="lessons-template" type="text/x-handlebars-template">
+		{{#each this}}
+			<div class="col-md-3 col-sm-4">
+				<div class="classroom-box">
+					<a class="classroom-img" href="" target="_blank"><img src="{{pic_url}}" alt=""></a>
+					<div class="classroom-info">
+						<h2><a href="" target="_blank">{{name}}</a></h2>
+						<a class="download-btn" href="#" rel={{file_url}}>下载</a>
+					</div>
+				</div>
+			</div>
+		{{/each}}
+	</script>
+	<script id="popup-template" type="text/x-handlebars-template">
+		<table class="find-table">
+	 		<tr>
+	 			<th><h4 class="line-title text-left">课程名称</h4></th>
+	 			<td colspan="2">
+	 				<p>{{name}}</p>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th><h4 class="line-title text-left">课程主要内容</h4></th>
+	 			<td colspan="2">
+	 				<p>{{content}}</p>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th><h4 class="line-title text-left">主讲人</h4></th>
+	 			<td colspan="2">
+	 				<p>{{teacher}}</p>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th><h4 class="line-title text-left">培训时间</h4></th>
+	 			<td colspan="2">
+	 				<p>{{start_time}}~{{deadline}}</p>
+	 			</td>
+	 		</tr>
+
+			<tr>
+	 			<th><h4 class="line-title text-left">主办方</h4></th>
+	 			<td colspan="2">
+	 				<p>{{sponsor}}</p>
+	 			</td>
+	 		</tr>
+
+	 	</table>
+	</script>
+	<script src="js/layer/layer.js"></script>
+	<script src="js/classroom_list.js"></script>
+</body>
+</html>

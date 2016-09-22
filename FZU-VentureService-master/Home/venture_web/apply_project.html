@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>福州大学-大学生创业服务网</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<div class="login-wrapper">
+		<div class="login-box">
+			<span class="close"></span>
+			<div class="login-top">
+				<img src="images/logo.jpg" alt="">
+				<span>欢迎登录</span>
+			</div>
+			<div class="login-line1 login-line">
+				<img src="images/icon-users.png" alt="">
+				<input type="text" name="username" id="username" placeholder="请输入用户名">
+			</div>
+			<div class="login-line2 login-line">
+				<img src="images/icon-password.png" alt="">
+				<input type="password" name="password" id="password" placeholder="请输入密码">
+			</div>
+			<div class="login-line3">
+				<a class="pull-right" href="#"><span class="forgot">忘记密码</span></a>
+			</div>
+				<button id='login-btn'>登录</button>
+		</div>
+		<div class="modify-password-box modify-box">
+			<span class="close"></span>
+			<form action="" id="modify-password" class="modify-form">
+				<p class="tel-line">
+					<input type="text" name="tel" placeholder="手机号">
+					</p>
+				<p class="code-line">	
+					<input type="text" name="v_code" placeholder="短信验证码">
+					<input class="send-btn" type="button"  value="发送验证码">
+				</p>
+				<p class="password-line">
+					<input type="text" name="new_password" placeholder="设置新密码">
+				</p>
+				<p class="submit-line">
+					<input class="submit" type="submit" value="确认修改">
+				</p>
+			</form>
+		</div>
+	</div>
+
+	<!-- Header Start -->
+	<header>
+		<a href="index.html" id="logo">
+			<!-- <img src="images/logo.jpg" alt=""> -->
+		</a>
+		<div class="main-nav">
+			<ul class='clearfix'>
+				<li class='pull-left'><a href="index.html">首页</a></li>
+				<li class='pull-left'><a href="information.html">新闻资讯</a></li>
+				<li class='pull-left'><a href="base.html">孵化基地</a></li>
+				<li class='pull-left'><a href="projects.html">创业项目</a></li>
+				<li class='pull-left'><a href="game.html">相关比赛</a></li>
+				<li class='pull-left'><a href="classroom.html">培训课堂</a></li>
+			</ul>
+		</div>
+		<span class="mobile-menu"></span>
+			<div class="usr-wrapper login-signup">
+				<span class="login"><a>登录</a></span>
+				<span class="separator"></span>
+				<span class="signup"><a href="signup.html">注册</a></span>
+			</div>
+			<div class="usr-wrapper center-cancel">
+				<span id="usre-center" class="user-center"><a href="user_student.html">个人中心</a></span>
+				<span class="separator"></span>
+				<span class="user-cancel"><a>注销</a></span>
+			</div>
+	</header>
+	<div class="mobile-bar">
+		<ul>			
+			<li><a href="index.html">首页</a></li>
+			<li><a href="information.html">新闻资讯</a></li>
+			<li><a href="">孵化基地</a></li>
+			<li><a href="projects.html">创业项目</a></li>
+			<li><a href="game.html">相关比赛</a></li>
+			<li><a href="classroom.html">培训课堂</a></li>
+		</ul>
+	</div>
+	<!-- Header End -->
+
+	<!-- Apply-project Start -->
+	<div class="user-wrapper apply-project-wrapper">
+		<div class="container">
+			<div class="user-box-top">
+				<img src="images/apply.png" alt="">
+				<h1>申请项目</h1>
+			</div>
+			<div class="user-apply-sidenav pull-left">
+				<ul>
+					<li class="now" title="基本信息">1</li>
+					<li title="合伙人">2</li>
+					<li title="融资需求">3</li>
+				</ul>
+			</div>
+			<div class="user-apply-warn pull-left">
+				<p>标*为必填信息。</p>
+				<p>您的报名表将作为孵化营初审的主要依据，丰富相关内容有助于评审委员会及投资机构更全面了解您的创业项目。若某条信息内容无法确认或缺失，请填“无”。</p>
+			</div>
+			<div class="user-box step1 block">
+				<form action="" id="step1" enctype="multipart/form-data" method="post">
+					<table id="apply-step1-table" class="apply-step1 apply-steps">
+						<tr>
+							<th class="text-center" colspan="5">项目基本信息</th>
+						</tr>
+						<tr>
+							<td>项目名称<span class="star">*</span></td>
+							<td colspan="4"><input id="project-name" type="text" name="name" require></td>
+						</tr>
+						<tr>
+							<td>项目图片<span class="star">*</span><br><span class="upload-hint">(大小不超过2M)</span></td>
+							<td colspan="4"><input id="project-pic" type="file" name="pic" placeholder="图片大小不得超过2M" require></td>
+						</tr>
+						<!-- <tr>
+							<td>项目LOGO</td>
+							<td><input id="project-logo" type="file" name="logo"></td>
+						</tr> -->
+						<tr>
+							<td>所属领域<span class="star">*</span></td>
+							<td colspan="4">
+								<select id="project-area" name="area"  require>
+									<option></option>
+                    <option value="0">文化创业类</option>  
+                    <option value="1">科技创业类</option>  
+                    <option value="2">创业苗圃</option>  
+                    <option value="3">互联网+现代农业</option>  
+                    <option value="4">互联网+制造业</option>  
+                    <option value="5">互联网+信息技术服务</option>  
+                    <option value="6">互联网+商务服务</option>  
+                    <option value="7">互联网刚+公共服务</option>  
+                    <option value="8">互联网+公益创业</option>  
+							</select>
+							</td>
+						</tr>
+						<tr>
+							<td>产品类别<span class="star">*</span></td>
+							<td colspan="4">
+								<input id="hardware" type="radio" name="product_type" value="0" require>
+								<label class="radio-inline" for="hardware">硬件</label>
+								<input id="software" type="radio" name="product_type" value="1" require>
+								<label class="radio-inline" for="software">软件</label>
+								<input id="app" type="radio" name="product_type" value="2" require>
+								<label class="radio-inline" for="app">APP</label>
+								<input id="website" type="radio" name="product_type" value="3" require>
+								<label class="radio-inline" for="website">网站</label>
+
+							</td>
+						</tr>
+
+						<tr>
+							<td>项目简介<span class="star">*</span></td>
+							<td colspan="4">
+								<textarea id="project-brief" name="synopsis" placeholder="500字以内" require></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>项目开发进度<span class="star">*</span></td>
+							<td colspan="4">
+								<input type="text" name="progress" require>
+							</td>
+
+						</tr>
+						<tr>
+							<td>销售或服务类型</td>
+							<td colspan="4"><input type="text" name="service_type"></td>
+						</tr>
+						<tr>
+							<td>公司是否注册<span class="star">*</span></td>
+							<td colspan="4">
+								<input id="founded" type="radio" name="is_company" value="1" require>
+								<label class="radio-inline" for="founded">是</label>
+								<input id="unfounded" type="radio" name="is_company" value="0" require>
+								<label class="radio-inline" for="unfounded">否</label>
+							</td>
+						</tr>
+						<tr>
+							<td>公司形式</td>
+							<td colspan="4">
+								<select id="compony-form" name="form_company"  require>
+									<option></option>
+                    <option value="1">无限责任公司</option>  
+                    <option value="2">有限责任公司</option>  
+                    <option value="3">股份有限公司</option>  
+                    <option value="4">个人独资企业</option>  
+                    <option value="5">合伙企业</option>  
+                    <option value="6">公司制企业</option>  
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>面向群体<span class="star">*</span></td>
+							<td colspan="4">
+								<select id="oriented-group" name="group"  require>
+									<option></option>
+                  <option value="0">公司企业</option>  
+                  <option value="1">学校单位</option>  
+                  <option value="2">学生</option>  
+                  <option value="3">母婴</option>  
+                  <option value="4">老年人</option>  
+                  <option value="5">公司职员</option>  
+                  <option value="6">公职人员</option>  
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>商业计划书<span class="star">*</span></td>
+							<td colspan="4">
+								<input type="file" name="plan" require>
+							</td>
+						</tr>
+						<tr>
+							<td>附件</td>
+							<td colspan="4">
+								<input type="file" name="attachment">
+							</td>
+						</tr>
+						<tr>
+							<td id="patent-info" rowspan="2">专利情况<span class="add-patent">添加</span></td>
+							<td>申请号</td>
+							<td><input name="patent[1][application_num]" type="text"></td>
+							<td>申请日期</td>
+							<td><input class="application-date" name="patent[1][application_date]" type="text"></td>
+						</tr>
+						<tr>
+							<td>公告号</td>
+							<td><input name="patent[1][notification_num]" type="text"></td>
+							<td>授权日期</td>
+							<td><input class="authorized-date" name="patent[1][authorized_date]" type="text"></td>
+						</tr>
+					</table>
+					<div class="apply-setps-btn">
+						<input id="step1-btn" class="btn-next step-btn" type="submit" value="下一步">
+					</div>
+				</form>
+			</div>
+			<div class="user-box step2">
+				<form action="" id="step2">
+					<table id="member-info" class="apply-step2 apply-steps">
+						<tr>
+							<th class="text-center" colspan="4">队员信息</th>
+						</tr>
+						<tr>
+							<td>姓名<span class="star">*</span></td>
+							<td>
+								<input name="partner[1][name]" type="text"  require>
+							</td>
+							<td>性别<span class="star">*</span></td>
+							<td>
+								<input id="male" name="partner[1][sex]" type="radio"  value="male" require>
+								<label class="radio-inline" for="male">男</label>
+								<input id="female" name="partner[1][sex]" type="radio"  value="female" require>
+								<label class="radio-inline" for="female">女</label>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>专业<span class="star">*</span></td>
+							<td><input name="partner[1][major]" type="text"  require></td>
+							<td>占股比例<span class="star">*</span></td>
+							<td><input name="partner[1][share_percentage]" type="text" require></td>
+						</tr>
+						
+						<tr>
+							<td>证件类型<span class="star">*</span></td>
+							<td>
+								<select name="partner[1][id_type]" id="id-type" require>
+									<option></option>
+                  <option value="stu_card">学生证</option>  
+                  <option value="id_card">身份证</option>  
+                  <option value="others">其他</option>
+								</select>
+							</td>
+							<td>证件号<span class="star">*</span></td>
+							<td>
+								<input name="partner[1][id_number]" type="text"  require>
+							</td>
+						</tr>
+						<tr>
+							<td>手机<span class="star">*</span></td>
+							<td><input name="partner[1][tel]" type="text"  require></td>
+							<td>邮箱<span class="star">*</span></td>
+							<td><input name="partner[1][email]" type="text"  require></td>
+						</tr>
+						<tr>
+							<td>主要职责<span class="star">*</span></td>
+							<td colspan="3">
+								<input id="duty-technology" type="radio" name="partner[1][duty]" value="0" require>
+								<label class="radio-inline" for="duty-technology">技术</label>
+								<input id="duty-financing" type="radio" name="partner[1][duty]" value="1" require>
+								<label class="radio-inline" for="duty-financing">融资
+								</label> 
+								<input id="duty-operation" type="radio" name="partner[1][duty]" value="2" require>
+								<label class="radio-inline" for="duty-operation">运营
+								</label>
+								<input id="duty-market" type="radio" name="partner[1][duty]" value="3" require>
+								<label class="radio-inline" for="duty-market">市场
+								</label>
+								<input id="duty-others" type="radio" name="partner[1][duty]" value="4" require>
+								<label class="radio-inline" for="duty-others">其他
+								</label>
+								
+							</td>
+						</tr>
+							<td>工作履历</td>
+							<td colspan="3">
+								<textarea name="partner[1][work_record]" placeholder="150字以内"></textarea>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>创业履历</td>
+							<td colspan="3">
+								<textarea name="partner[1][business_record]" placeholder="150字以内"></textarea>
+							</td>
+						</tr>
+						
+					</table>
+					<div class="member-search-box">
+						<input type="text">
+						<a id="add-member" class="member-add-btn" href="javascript:void(0)">添加队员</a>
+					</div>
+					<div class="apply-setps-btn">
+						<span class="btn-pre step-btn">上一步</span>
+						<input id="step2-btn" class="btn-next step-btn" type="submit" value="下一步">
+					</div>
+				</form>
+			</div>
+			<div class="user-box step3">
+				<form action="" id="step3">
+					<table class="apply-step3 apply-steps">
+						<tr>
+							<th class="text-center" colspan="4">融资需求</th>
+						</tr>
+						<tr>
+							<td>已融资金额<span class="star">*</span></td>
+							<td>
+								<input type="text" name="finan_amount" require>
+							</td>
+						</tr>
+						<tr>
+							<td>融资方式<span class="star">*</span></td>
+							<td>
+								<input id="financing-type1" type="checkbox" name="finan_mode" value="0" require>
+								<label class="checkbox-inline" for="financing-type1">银行贷款</label>
+								<input id="financing-type2" type="checkbox" name="finan_mode" value="1" require>
+								<label class="checkbox-inline" for="financing-type2">股票筹资</label>
+								<input id="financing-type3" type="checkbox" name="finan_mode" value="2" require>
+								<label class="checkbox-inline" for="financing-type3">债券融资</label>
+
+								<input id="financing-type4" type="checkbox" name="finan_mode" value="3" require>
+								<label class="checkbox-inline" for="financing-type4">融资租赁</label>
+								<input id="financing-type5" type="checkbox" name="finan_mode" value="4" require>
+								<label class="checkbox-inline" for="financing-type5">海外融资</label>
+								<input id="financing-type6" type="checkbox" name="finan_mode" value="5" require>
+								<label class="checkbox-inline" for="financing-type6">典当融资</label>
+							</td>
+						</tr>
+						<tr>
+							<td>融资时间段<span class="star">*</span></td>
+							<td colspan="3"><input id="time1" type="text" name="time" required>至<input id="time2" type="text" name="time" required></td>
+						</tr>
+							<tr>
+								<td>融资阶段<span class="star">*</span></td>
+								<td>
+									<input id="financing-stage0" type="radio" name="stage" value="0"  require />
+									<label class="radio-inline" for="financing-stage0">未融资</label>
+						          	<input id="financing-stage1" type="radio" name="stage" value="1"  require />
+									<label class="radio-inline" for="financing-stage1">天使轮</label>
+						          	<input id="financing-stage2" type="radio" name="stage" value="2"  require />
+									<label class="radio-inline" for="financing-stage2">A轮</label>
+									<input id="financing-stage3" type="radio" name="stage" value="3"  require />
+									<label class="radio-inline" for="financing-stage3">B轮</label>
+									<input id="financing-stage4" type="radio" name="stage" value="4"  require />
+									<label class="radio-inline" for="financing-stage4">C轮</label>
+									<input id="financing-stage5" type="radio" name="stage" value="5"  require />
+									<label class="radio-inline" for="financing-stage5">D轮</label>
+									<input id="financing-stage6" type="radio" name="stage" value="6"  require />
+									<label class="radio-inline" for="financing-stage6">E轮及以后</label>
+									
+								</td>
+							</tr>
+					</table>
+					<div class="apply-setps-btn">
+						<span class="btn-pre step-btn">上一步</span>
+						<input id="step3-btn" class="btn-next step-btn" type="button" value="提交">
+					</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	<!-- Apply-project End -->
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
+	<script id="member-template" type="text/x-handlebars-template">
+		<tr>
+			<th class="text-center" colspan="4">队员信息</th>
+		</tr>
+		<tr>
+			<td>姓名<span class="star">*</span></td>
+			<td>
+				<input name="partner[{{index}}][name]" type="text"  require>
+			</td>
+			<td>性别<span class="star">*</span></td>
+			<td>
+				<input name="partner[{{index}}][sex]" type="radio"  value="male" require>男
+				<input name="partner[{{index}}][sex]" type="radio"  value="female" require>女
+			</td>
+			
+		</tr>
+		<tr>
+			<td>专业<span class="star">*</span></td>
+			<td>
+				<input name="partner[{{index}}][major]" type="text"  require>
+			</td>
+			<td>占股比例<span class="star">*</span></td>
+			<td><input name="partner[{{index}}][share_percentage]" type="text"  require></td>
+		</tr>
+		
+		<tr>
+			<td>证件类型<span class="star">*</span></td>
+			<td>
+				<select name="partner[{{index}}][id_type]" id="id-type" require>
+					<option></option>
+                    <option value="stu_card">学生证</option>  
+                    <option value="id_card">身份证</option>  
+                    <option value="others">其他</option>
+				</select>
+			</td>
+			<td>证件号<span class="star">*</span></td>
+			<td>
+				<input name="partner[{{index}}][id_number]" type="text"  require>
+			</td>
+		</tr>
+		<tr>
+			<td>手机<span class="star">*</span></td>
+			<td><input name="partner[{{index}}][tel]" type="text"  require></td>
+			<td>邮箱<span class="star">*</span></td>
+			<td><input name="partner[{{index}}][email]" type="text"  require></td>
+		</tr>
+		<tr>
+			<td>主要职责<span class="star">*</span></td>
+			<td colspan="3">
+				<input id="duty-technology" type="radio" name="partner[{{index}}][duty]" require>
+				<label class="radio-inline" for="duty-technology">技术</label>
+				<input id="duty-financing" type="radio" name="partner[{{index}}][duty]" require>
+				<label class="radio-inline" for="duty-financing">融资
+				</label> 
+				<input id="duty-operation" type="radio" name="partner[{{index}}][duty]" require>
+				<label class="radio-inline" for="duty-operation">运营
+				</label>
+				<input id="duty-market" type="radio" name="partner[{{index}}][duty]" require>
+				<label class="radio-inline" for="duty-market">市场
+				</label>
+				<input id="duty-others" type="radio" name="partner[{{index}}][duty]" require>
+				<label class="radio-inline" for="duty-others">其他
+				</label>
+				
+			</td>
+		</tr>
+			<td>工作履历</td>
+			<td colspan="3">
+				<textarea name="partner[{{index}}][work_record]" placeholder="150字以内"></textarea>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>创业履历</td>
+			<td colspan="3">
+				<textarea name="partner[{{index}}][business_record]" placeholder="150字以内"></textarea>
+			</td>
+		</tr>
+	</script>
+	<script src="js/laydate/laydate.dev.js"></script>
+	<script src="js/apply.js"></script>
+	<script src="js/apply_project.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<include file="Public:header"/>
+<!-- 比赛管理 -->
+<div class="user-box admin-games-management pull-right">
+	<div class="admin-top">
+		<a class="admin-publish-game" href="__ROOT__/index.php/home/competition/publish">发布比赛通知</a>
+	</div>
+
+	<div class="admin-new-table admin-info-table admin-table block">
+		<table>
+			<tr>
+				<th class="admin-th-select">
+					<input class="admin-news-select-btn" type="checkbox">
+				</th>
+				<th class="admin-th-article-id admin-th-id"><span>ID</span></th>
+				<th class="admin-th-article-title admin-th-title"><span>标题</span></th>
+				<th class="admin-th-article-times admin-th-times"><span>届数</span></th>
+				<th class="admin-th-article-publishtime admin-th-publishtime"><span>发布时间</span></th>
+				<th class="admin-th-article-deadline admin-th-deadline"><span>截止时间</span></th>
+				<th class="admin-th-article-operation admin-th-operation"><span>管理操作</span></th>
+			</tr>
+		<empty name="competition"> <!-- 要和volist的name一样 -->
+			<tr align="center">
+				<td colspan="6">
+					暂无比赛记录
+				</td>
+			</tr>
+		<else />
+			<volist name="competition" id="v">
+				<tr>
+					<td class="admin-article-select">
+						<input id="{$v.cid}" class="admin-policy-select-btn admin-select-btn" type="checkbox">
+					</td>
+					<td class="admin-article-id">{$i}</td>
+					<td class="admin-article-title">
+						<a href="article.html">{$v.name}</a>
+					</td>
+					<td class="admin-article-times"><span>第 {$v.times} 届</span></td>
+					<td class="admin-article-publishtime"><span>{$v.issue_time}</span></td>
+					<td class="admin-article-deadline"><span>{$v.deadline}</span></td>
+					<td class="admin-article-operation admin-operation">
+						<span class="admin-article-modify"><a href="__ROOT__/index.php/home/competition/modify?cid={$v.cid}">修改</a></span>
+						<span class="admin-article-delete"><a onclick="javascript: if(confirm('确定删除？')) return true; return false;" href="__ROOT__/index.php/home/competition/deleteOne?cid={$v.cid}">删除</a></span>
+					</td>
+				</tr>
+			</volist>
+		</empty>
+
+			<tr>
+				<td colspan="2">
+					<div class="admin-article-operation admin-operation">
+						<span class="admin-article-delete delete-all" style="right: 185px">批量删除</span>
+					</div>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+	<!-- 分页 -->
+	<div class="pull-right">
+		<ul class="pagination">
+			<if condition="$curPage neq 1 ">
+				<li><a href="__ROOT__/index.php/home/competition/index/1">首页</a></li>
+				<li><a href="__ROOT__/index.php/home/competition/index/{$curPage-1}">上一页</a></li>
+			</if>
+			
+			<if condition="($curPage gt 3) AND ($curPage lt $totalPage-2)">
+				<for start="$curPage-2" end="$curPage+3">
+					<li><a <?php if($i==$curPage) echo "class='now'"; ?> href="__ROOT__/index.php/home/competition/index/{$i}" >{$i}</a></li>
+				</for>
+			<elseif condition="($curPage gt $totalPage-3) AND ($totalPage gt 5)" />
+				<for start="$totalPage-5" end="$totalPage">
+					<li><a <?php if($i==$curPage) echo "class='now'"; ?> href="__ROOT__/index.php/home/competition/index/{$i}" >{$i}</a></li>
+				</for>
+			<elseif condition="$totalPage gt 5" />
+				<for start="1" end="6">
+					<li><a <?php if($i==$curPage) echo "class='now'"; ?> href="__ROOT__/index.php/home/competition/index/{$i}" >{$i}</a></li>
+				</for>
+			<else />
+				<for start="1" end="$totalPage">
+					<li><a <?php if($i==$curPage) echo "class='now'"; ?> href="__ROOT__/index.php/home/competition/index/{$i}" >{$i}</a></li>
+				</for>
+			</if>
+				
+			<if condition="$curPage lt $totalPage-1">
+				<li><a href="__ROOT__/index.php/home/competition/index/{$curPage+1}">下一页</a></li>
+				<li><a href="__ROOT__/index.php/home/competition/index/{$totalPage-1}">末页</a></li>
+			</if>
+
+			<li><a href="">共 {$total} 条记录</a></li>
+		</ul>
+	</div>
+
+</div>
+<include file="Public:footer"/>
+
+<script type="text/javascript">
+	var deleteBtn = document.querySelector('.delete-all');
+	var idArr;
+	deleteBtn.onclick = function() {
+		idArr = [];
+		var select = document.querySelectorAll('.admin-select-btn');
+		select = [].slice.call(select);
+		select.forEach(function (elem) {
+			console.log(elem);
+			console.log(elem.checked);
+			if(elem.checked) {
+				idArr.push(elem.id);
+			}
+		})
+		// console.log(nidArr);
+		$.ajax({
+			url: "./discard",
+			type: 'POST',
+			data: {idArr:idArr},
+			dataType: 'json',
+			async:false,
+			success:function(result) {
+				alert(result.msg);
+				window.location.reload();
+			}
+		})
+	}
+</script>

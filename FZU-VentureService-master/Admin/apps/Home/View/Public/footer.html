@@ -1,0 +1,45 @@
+			<div class="admin-popup">
+				<div class="popup-refuse">
+					<form action="__ROOT__/index.php/home/admin/refuse" method="post">
+						<p>请填写拒绝理由</p>
+						<p class="refuse-hint">拒绝后将通过短信通知</p>
+						<input id="module" type="hidden" name="module" value="{$MODULE}">
+						<input id="receiver" type="hidden" name="receiver" value="">
+						<textarea name="message"></textarea>
+						<div class="popup-select clearfix">
+							<span class="yes pull-left"><input type="submit" name="sub" value="确认"></span>
+							<span class="no pull-right">取消</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Admin End -->
+	
+	<script src="__PUBLIC__/js/admin.js"></script>
+
+
+	<!-- 日期插件 -->
+	<script src="__PUBLIC__/date/bootstrap/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<script src="__PUBLIC__/date/bootstrap/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/date/bootstrap/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript">
+		var refuse = function(e){
+			var tel = e.id;
+			document.getElementById('receiver').value = tel;
+		}
+		$('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    	});
+    	$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd'});
+	</script>
+</body>
+</html>

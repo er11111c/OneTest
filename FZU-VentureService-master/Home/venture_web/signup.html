@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>注册-福州大学创业服务网</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<div class="signup-wrapper">
+		<div class="container">
+			<div class="signup-content">
+				<div class="signup-logo">
+					<a href="index.html" title="返回首页"><img src="images/logo.png" alt=""></a>
+				</div>
+				<div class="signup-box">
+					<div class="signup-form-wrapper block">
+						<form id="signup-form" class="signup-form-users" action="">
+							<div class="signup-role-select">
+								<input type="radio" checked="checked" name="student" id="select0" class="st">
+									<span class="role now">福大学子</span>
+								<input type="radio" name="teacher" id="select1" class="st">
+									<span class="role">创业导师</span>
+								<input type="radio" name="investor" id="select2" class="st">
+									<span class="role">投资企业</span>
+							</div>
+							<div class="base-information-box">
+								<p class="base-information">
+									<label for="username">用户名：</label>
+									<input id="username" name="username" type="text" required>
+								</p> 
+								<p class="base-information">
+									<label for="name">姓名：</label>
+									<input id="name" name="name" type="text" required>
+								</p> 
+
+								<p class="base-information">
+									<label for="password">密码：</label>
+									<input id="password" name="password" type="password" required>
+								</p>
+								<p class="base-information">
+									<label for="confirm-password">确认密码：</label>
+									<input id="confirm-password" name="confirm_password" type="password" required>
+								</p>
+								<p class="base-information">
+									<label for="email">邮箱：</label>
+									<input id="email" name="email" type="email">
+								</p>
+								<p class="base-information">
+									<label for="tel">手机号：</label>
+									<input id="tel" name="tel" type="text">
+								</p>
+								<p class="base-information">
+									<label for="v-code">短信验证码：</label>
+									<input id="v-code" class="v-code" type="v-code" name="v_code" type="text">
+									<input type="button" class="send-code" value='发送验证码'>
+								</p>
+							</div>
+							<p>
+								<input id="submit" class="submit" type="submit" value="提交">
+							</p>
+						</form>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- <script src="js/jquery.js"></script> -->
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/signup.js"></script>
+</body>
+</html>
